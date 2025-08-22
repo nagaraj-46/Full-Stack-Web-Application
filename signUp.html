@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://png.pngtree.com/png-clipart/20220922/original/pngtree-letter-v-icon-png-image_8627704.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
+        body{
+            height: auto;
+            width: auto;
+            outline: none;
+            box-sizing: border-box;
+            margin: auto;
+            background-color:rgb(41, 28, 98);
+            color: white;
+        }
+        .form{
+            display: flex;
+            flex-direction: row;
+        }
+        .lable{
+           display: flex;
+           flex-direction:column;
+           align-items: center;
+           margin-bottom: 1em;
+           border-bottom: 1px solid white;
+        }
+        .lable>.label2{
+            margin-bottom: 1em;
+        }
+        .main{
+            height: 35em;
+            width: 30em;
+            margin-left: 15em;
+
+        }
+        .names{
+            display: flex;
+            flex-direction: row;
+        }
+        .name1,.name2{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        .name1>label,.name2>label{
+            margin: 0.5em 0em 0.5em 0em;
+        }
+        .dates{
+            display: flex;
+            flex-direction: row;
+
+        }
+        .gender{
+            display: flex;
+            flex-direction: row;
+        }
+        .fled4{
+            display: flex;
+            flex-direction: row;
+        }
+        .mail,.mobile{
+            display: flex;
+            flex-direction: column;
+        }
+        .name1>input{
+            width: 220px;
+            margin-right: 10px;
+            height: 30px;
+            padding-left: 10px;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+        }
+        .name2>input{
+            width: 220px;
+            margin-right: 10px;
+            height: 30px;
+            padding-left: 10px;
+            outline: none;
+            border: none;
+            border-radius: 5px;
+        }
+        .dates>.date>select{
+            width: 150px;
+            height: 40px;
+            border: none;
+            outline: none;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .dates>.month>select{
+            width: 150px;
+            height: 40px;
+            margin-left: 10px;
+            padding: 10px;
+            border: none;
+            outline: none;
+            border-radius: 5px;
+        }
+        .dates>.year>select{
+            width: 150px;
+            height: 40px;
+            margin-left: 10px;
+            border: none;
+            outline: none;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .gender>.Female{
+            border: 1px solid white;
+        }
+        .gender>.Male,.Custome{
+            border: 1px solid white;
+            margin-left: 7.35em;
+        }
+        .Male,.Female,.Custome{
+            padding: 5px;
+        }
+        .field4>div>input{
+            width: 460px;
+            margin-right: 10px;
+            height: 35px;
+            padding-left: 10px;
+            outline: none;
+            border: none;
+            border-radius: 5px;   
+            margin: 0.5em 0em 0.5em 0em;        
+        }
+        .field4>div>label{
+            margin: 0.99em 0em 0em 0em;
+        }
+        .field5>div>input{
+            width: 460px;
+            margin-right: 10px;
+            height: 35px;
+            padding-left: 10px;
+            outline: none;
+            border: none;
+            border-radius: 5px;   
+            margin: 0.5em 0em 0.5em 0em;        
+        }
+        .GenderLogo,.DateLogo{
+            padding: 0.5em 0em 0.5em 0em;
+        }
+        .main2{
+            width: 30em;
+            height: 33em;
+            border-radius: 15px;
+            position: absolute;
+            left: 50em;
+            bottom: 6.0em;
+            background-color: rgb(22, 22, 60);
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+        }
+        .imgOrginal>img{
+            border-radius: 75%;
+            position: absolute;
+            left: 8em;
+            top: 3.5em;
+        }
+        .quots{
+            position: absolute;
+            left: 11em;
+            top: 20em;
+        }
+        .buttons{
+            display: flex;
+            flex-direction: column;
+            margin: 0.5em 0em 1em 0em;
+        }
+        .buttons>.btn{
+            display: flex;
+            flex-direction: row;
+        }
+        .buttons>.btn>.btn1>button{
+            width: 200px;
+            height: 35px;
+            font-size: 20px;
+            background-color: rgb(27, 88, 27);
+            border: none;
+            outline: none;
+            border-radius: 15px;
+            position: absolute;
+            left: 25.5em;
+            bottom: 1.0em;
+        }
+        .buttons>.btn>.btn2{
+            margin-top: 1em;
+            margin-left:0.0em;
+        }
+        .buttons>.btn>.btn1>i{
+            position: absolute;
+            left: 34.0em;
+            bottom: 1.8em;
+            color: white;
+        }
+        .buttons>.btn>.btn2>i{
+            position: absolute;
+            left: 15.5em;  
+            bottom: 1.7em;
+            color: blue;
+        }
+        .buttons>.btn>.btn2>a{
+            border: 0.5px solid white;
+            border-radius: 15px;
+        }
+        .buttons>.btn>.btn1>button:hover{
+            background-color: red;
+            opacity: 0.5;
+            color: white;
+        }
+        .buttons>.btn>.btn2>button:hover{
+            background-color: red;
+            opacity: 0.5;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <form action="Register" target="_self" method="get">
+        <div class="main">
+            <div class="lable">
+                <div class="label1">
+                    <h1>Create a new account</h1>
+                </div>
+                <div class="label2">
+                    <span style="font-size:18px; font-weight: 700;">It's quick and easy.</span>
+                </div>
+            </div>
+            <div class="names">
+                <div class="name1">
+                    <label>Enter a First Name</label>
+                    <input type="text" placeholder="First Name" name="firstName" required>
+                </div>
+                <div class="name2">
+                    <label>Enter a last Name</label>
+                    <input type="text" placeholder="Second Name" name="scondName" required>
+                </div>
+            </div>
+            <div class="DateLogo">
+                <span>Date Of Birth?</span>
+            </div>
+            <div class="dates">
+                <div class="date">
+                    <select name="userDate">
+                        <option value="1" selected>1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                        <option value="10">10</option>
+                        <option value="11">11</option>
+                        <option value="12">12</option>
+                        <option value="13">13</option>
+                        <option value="14">14</option>
+                        <option value="15">15</option>
+                        <option value="16">16</option>
+                        <option value="17">17</option>
+                        <option value="18">18</option>
+                        <option value="19">19</option>
+                        <option value="20">20</option>
+                        <option value="21">21</option>
+                        <option value="22">22</option>
+                        <option value="23">23</option>
+                        <option value="24">24</option>
+                        <option value="25">125</option>
+                        <option value="26">26</option>
+                        <option value="27">27</option>
+                        <option value="28">28</option>
+                        <option value="29">29</option>
+                        <option value="30">30</option>
+                        <option value="31">31</option>
+                    </select>
+                </div>
+                <div class="month">
+                    <select name="userMonth">
+                        <option value="1" selected>Jan</option>
+                        <option value="2">Feb</option>
+                        <option value="3">Mar</option>
+                        <option value="4">Api</option>
+                        <option value="5">May</option>
+                        <option value="6">June</option>
+                        <option value="7">July</option>
+                        <option value="8">Aug</option>
+                        <option value="9">Sep</option>
+                        <option value="10">Oct</option>
+                        <option value="11">Nov</option>
+                        <option value="12">Dec</option>
+                    </select>   
+                </div>
+                <div class="year">
+                    <select name="userYear">
+                        <option value="1985">1985</option>
+                        <option value="1984">1984</option>
+                        <option value="1983">1983</option>
+                        <option value="1992">1992</option>
+                        <option value="1991">1991</option>
+                        <option value="1990">1990</option>
+                        <option value="1991">1991</option>
+                        <option value="1992">1992</option>
+                        <option value="1993">1993</option>
+                        <option value="1994">1994</option>
+                        <option value="1995">1995</option>
+                        <option value="1996">1996</option>
+                        <option value="1997">1997</option>
+                        <option value="1998">1998</option>
+                        <option value="1999">1999</option>
+                        <option value="2000">2000</option>
+                        <option value="2001">2001</option>
+                        <option value="2002">2002</option>
+                        <option value="2003" selected>2003</option>
+                        <option value="2004">2004</option>
+                        <option value="2005">2005</option>
+                        <option value="2006">2006</option>
+                        <option value="2007">2007</option>
+                        <option value="2008">2008</option>
+                        <option value="2009">2009</option>
+                        <option value="2010">2010</option>
+                        <option value="2011">2011</option>
+                        <option value="2012">2012</option>
+                        <option value="2013">2013</option>
+                        <option value="2014">2014</option>
+                        <option value="2015">2015</option>
+                        <option value="2016">2016</option>
+                        <option value="2017">2017</option>
+                        <option value="2018">2018</option>
+                        <option value="2019">2019</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                        <option value="2023">2023</option>
+                        <option value="2024">2024</option>
+                        <option value="2025">2025</option>
+                        <option value="2026">2026</option>
+                        <option value="2027">2027</option>
+                        <option value="2028">2028</option>
+                        <option value="2029">2029</option>
+                        <option value="2030">2030</option>
+                        <option value="2031">2031</option>
+                    </select>
+                </div>
+            </div>
+            <div class="GenderLogo">
+                <span style="margin: 1em 0em 1em 0em;">Gender?</span>
+            </div>
+            <div class="gender" style="cursor:pointer">
+                <div class="Female" style="cursor:pointer">
+                    <label for="fe" style="cursor:pointer">Female</label><input type="radio" value="Female" name="gender" id="fe" style="cursor:pointer" required>
+                </div>
+                <div class="Male" style="cursor:pointer">
+                    <label for="m" style="cursor:pointer">Male</label><input type="radio" value="Male" name="gender" id="m" style="cursor:pointer" required>
+                </div>
+                <div class="Custome" style="cursor:pointer">
+                    <label for="c" style="cursor:pointer">Custom</label><input type="radio" value="Custome" name="gender" id="cu" style="cursor:pointer" required>
+                </div>
+            </div>
+            <div class="field4">
+                <div class="mail">
+                    <label>Enter a Mobile Number</label>
+                    <input type="number" placeholder="Mobile Number" maxlength="10" name="userMobileNumber" required>
+                </div>
+                <div class="mobile">
+                    <label>Enter a Email Adders</label>
+                    <input type="email" id="email" size="30" placeholder="Mail adders" maxlength="35" name="userEmail" required>
+                </div>
+            </div>
+            <div class="field5">
+                <div class="password1">
+                    <label>Enter New Password</label>
+                    <input type="password" placeholder="New Password" name="newPassword" required id="newPassword" onchange="checkPasswords()">
+                </div>
+                <div class="password2">
+                    <label>Enter Conform Password</label>
+                    <input type="password" placeholder="Conform Password" name="conformPassword" required id="ConfirmPassword" onchange="checkPasswords()">
+                </div>
+            </div>
+            <div class="buttons">
+                <div>
+                    <input type="checkbox" id="scales" name="scales" required/><label>Agree with Terams And Conditions</label>
+                </div>
+                <div class="btn">
+                    <div class="btn1">
+                        <i class="fa fa-hand-o-right" aria-hidden="true" id="ign"  style="display: none;"></i>
+                        <button id="saveButton"  style="display: none;">SIGN UP</button>
+                    </div>
+                    <div class="btn2">
+                        <i class="fa fa-google" aria-hidden="true"></i><a href="https://www.google.com" style="text-decoration: none;font-size:18px; padding: 10px 10px 10px 25px; color: white;">SignUp with Google</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="main2">
+            <div class="imgOrginal">
+                <img src="https://th.bing.com/th/id/OIP.Kyvz_EE1x2vs6gEoxImKJAAAAA?w=196&h=196&c=7&r=0&o=5&dpr=1.3&pid=1.7" alt="img"/>
+            </div>
+            <div class="quots">
+                <h1>&nbsp;&nbsp;Just Now!</h1>
+                <h1>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SignUp</h1>
+                <h1>Explore More..&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h1>
+            </div>
+        </div>
+    </form>
+    <script>
+        function checkPasswords() {
+            var newPassword = document.getElementById("newPassword").value;
+            var confirmPassword = document.getElementById("ConfirmPassword").value;
+            if (newPassword === confirmPassword && isValid(newPassword)) {
+                document.getElementById("saveButton").style.display = "inline-block";
+            } else {
+                document.getElementById("saveButton").style.display = "none";
+            }
+        }
+            //var s = document.getElementById("newPassword").value;
+        function isValid(s) {
+                var isUpper = false; 
+                var isLower = false;  
+                var isDigit = false;  
+                var isSpecial = false; 
+                if (s.length >= 4 && s.length <= 18) {
+                for (var i = 0; i < s.length; i++) {
+                        let ch = s.charAt(i);
+                        if (ch >= 'A' && ch <= 'Z') {
+                                isUpper = true;
+                        }
+                        else if (ch >= 'a' && ch <= 'z') {
+                            isLower = true;
+                        }
+                        else if (ch >= '0' && ch <= '9') {
+                            isDigit = true;
+                        }
+                        else {
+                            isSpecial = true;
+                        }
+                	}
+                }
+                if(isUpper && isLower && isDigit && isSpecial){
+                    return true
+                }
+                else {
+                   return false;
+                }
+            } 
+    </script>
+</body>
+</html>

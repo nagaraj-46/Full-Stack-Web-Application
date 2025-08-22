@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://png.pngtree.com/png-clipart/20220922/original/pngtree-letter-v-icon-png-image_8627704.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Document</title>
+    <style>
+        body{
+            height: auto;
+            width: auto;
+            outline: none;
+            box-sizing: border-box;
+            margin: auto;
+            padding: 5px;
+            background-color:rgb(41, 28, 98);
+            
+        }
+        .main{
+            display: flex;
+            flex-direction: column;
+            margin: 6em 0em 0em 15em;
+        }
+        .field1{
+            margin: 0em 1em 1em 0em;
+        }
+        .field1>input{
+            width: 350px;
+            height: 35px;
+            margin-top: 1em;
+            background-color:rgb(41, 28, 98);
+            border: 2px solid white;
+            padding-left: 30px;
+            color: white;
+            border-radius: 10px;
+        }
+        .field2>input{
+            width: 350px;
+            height: 35px;
+            margin:1em 0em 1em 0em;
+            background-color:rgb(41, 28, 98);
+            border: 2px solid white;
+            padding-left: 30px;
+            color: white;
+            border-radius: 10px;
+        }
+        .field3>input{
+            width: 350px;
+            margin-top: 1em;
+            height: 35px;
+            background-color:rgb(41, 28, 98);
+            border: 2px solid white;
+            padding-left: 30px;
+            color: white;
+            border-radius: 10px;
+        }
+        .field1>label{
+            margin-bottom: 1em;
+            font-size: 22px;
+            color: white;
+        }
+        .field2>label{
+            margin-bottom: 1em;
+            font-size: 22px;
+            color: white;
+        }
+        .field3>label{
+            margin-bottom: 1em;
+            font-size: 22px;
+            color: white;
+        }
+        .field1>input::placeholder{
+            color: white;
+            font-size: 16px;
+            opacity: 0.9;
+        }
+        .field2>input::placeholder{
+            color: white;
+            font-size: 16px;
+        }
+        .field3>input::placeholder{
+            color: white;
+            font-size: 16px;
+        }
+        .label{
+            margin: 0em 0em 0em 15em;
+        }
+        .main>div>input:hover{
+            box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+            cursor: pointer;
+            box-shadow: white 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+        }
+        .btn{
+            margin: 1em 0em 0em 0em;
+        }
+        .btn>button{
+            width: 240px;
+            height: 35px;
+            font-size: 22px;
+            border: none;
+            outline: none;
+            border-radius: 15px;
+            background-color: aliceblue;
+        }
+        .btn>button:hover{
+            box-shadow: white 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+            border: 0.1px solid white;
+            cursor: pointer;
+            background-color: red;
+            opacity: 0.8;
+        }
+        .main1>img{
+            width: 360px;
+            height: 200px;
+            border-radius: 5%;
+            position: absolute;
+            left: 55em;
+            top: 12em;
+        }
+        .main1>h1{
+            width: 360px;
+            height: 200px;
+            border-radius: 5%;
+            position: absolute;
+            left: 31em;
+            top: 3em;
+            color: white;
+        }
+        .main1>h2{
+            width: 360px;
+            height: 200px;
+            border-radius: 5%;
+            position: absolute;
+            left: 40em;
+            top: 18em;
+            color: rgb(240, 231, 231);
+        }
+    </style>
+</head>
+<body>
+    <form action="Update" method="get" target="_self">
+        <div class="label">
+            <h2 style="color: white; border-bottom: 0.1px solid white; width: 240px;">Change Your Password</h2>
+        </div>
+        <div class="main">
+            <div class="field1">
+                <label>Enter a Mobile Number</label><i class="fa fa-phone" aria-hidden="true"  style="position: absolute; left: 15.9em; top: 12.4em; color: white;"></i><br>
+                <input type="number" maxlength="10" required placeholder="Mobile Number" name="mobileNumber">
+            </div>
+            <div class="field2">
+                <label>Enter a New Password</label><i class="fa fa-lock" aria-hidden="true"  style="position: absolute; left: 15.9em; top: 18.4em; color: white;"></i><br>
+                <input type="text" maxlength="18" minlength="4" required id="newPassword" name="newPassword" placeholder="New Password" onchange="checkPasswords()">
+            </div>
+            <div class="field3">
+                <label>Enter a comfirm Password</label><i class="fa fa-key" aria-hidden="true"  style="position: absolute; left: 15.9em; top: 24.0em; color: white;"></i><br>
+                <input type="text" maxlength="18" minlength="4" required id="ConfirmPassword" name="ConfirmPassword" placeholder="Confirm Password" onchange="checkPasswords()">
+            </div>
+            <div class="btn">
+                <button style="display:none;" id="saveButton">Save</button>
+            </div>
+            <div>
+                <p style="color: white;">Already have an account? &nbsp;<a href="Login.html" style="text-decoration:none; color: red;">LogIn</a></p>
+            </div>
+            <div class="main1">
+                <img src="https://cloud.headwayapp.co/changelogs_images/images/big/000/017/939-f9fdd57ceb4a6b854574a3ff1cab2dab29e2122f.gif">
+                <h1>Welcome</h1>
+                <h2 id="demo"></h2>
+            </div>
+        </div>
+    </form>
+    <script>
+        function checkPasswords() {
+            var newPassword = document.getElementById("newPassword").value;
+            var confirmPassword = document.getElementById("ConfirmPassword").value;
+            if (newPassword === confirmPassword && isValid(newPassword)) {
+                document.getElementById("saveButton").style.display = "inline-block";
+                document.getElementById("demo").innerText="Valid!!!!"
+            } else {
+                document.getElementById("saveButton").style.display = "none";
+                document.getElementById("demo").innerText = "Check Your Password";
+            }
+        }
+        //var s = document.getElementById("newPassword").value;
+        function isValid(s) {
+                var isUpper = false; 
+                var isLower = false;  
+                var isDigit = false;  
+                var isSpecial = false; 
+                if (s.length >= 4 && s.length <= 18) {
+                for (var i = 0; i < s.length; i++) {
+                        let ch = s.charAt(i);
+                        if (ch >= 'A' && ch <= 'Z') {
+                                isUpper = true;
+                        }
+                        else if (ch >= 'a' && ch <= 'z') {
+                            isLower = true;
+                        }
+                        else if (ch >= '0' && ch <= '9') {
+                            isDigit = true;
+                        }
+                        else {
+                            isSpecial = true;
+                        }
+                	}
+              	}
+                if(isUpper && isLower && isDigit && isSpecial){
+                    return true
+                }
+                 else {
+                   return false;
+                }
+                return false;
+        } 
+    </script>
+</body>
+</html>

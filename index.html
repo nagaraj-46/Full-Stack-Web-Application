@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://png.pngtree.com/png-clipart/20220922/original/pngtree-letter-v-icon-png-image_8627704.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Index Page</title>
+    <style>
+         body{
+            background-image: url("https://images.unsplash.com/photo-1444080748397-f442aa95c3e5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1932&q=80");
+        }
+        .main{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 18%;
+        }
+        .left{
+            height: 150px;
+            width: 300px;
+
+        }
+        .left>i{
+            font-size: 150px;
+            color: white;
+            padding-left: 35%;
+            padding-top: 1.5%;
+        }
+        .right{
+            height: 150px;
+            width: 300px;
+            align-items: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            row-gap: 8px;
+        }
+        .right>a{
+            border: 0.5px solid white;
+            width: 250px;
+            height: 50px;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+        }
+        .right>a:hover{
+            background-color: brown;
+            color: white;
+        }
+        .typewriter{
+            position: absolute;
+            left: 34em;
+            top: 10em;
+        }
+        form>.typewriter>h1 {
+            overflow: hidden; 
+            border-right: .15em solid rgb(228, 225, 220); 
+            white-space: nowrap; 
+            margin: 0 auto;
+            letter-spacing: .15em; 
+            animation: 
+            typing 3.5s steps(40, end),
+            blink-caret .85s step-end infinite;
+        }
+        @keyframes typing {
+            from { width: 0 }
+             to { width: 100% }
+
+        }
+        .animations{
+            color: white;
+            position: absolute;
+            left: 23em;
+            top: 20em;
+            font-size: 24px;
+        }
+        .animations>p {
+            border-right: solid 3px rgba(0,255,0,.75);
+            white-space: nowrap;
+            overflow: hidden;    
+            font-family: 'Source Code Pro', monospace;  
+            font-size: 34px;
+            color:white;
+            font-weight: 800;
+        }
+        /* Animation */
+        .animations> p{
+            animation: animated-text 4s steps(29,end) 1s 1 normal both,
+            animated-cursor 600ms steps(29,end) infinite;
+        }
+        /* text animation */
+
+        @keyframes animated-text{
+            from{width: 0;}
+            to{width: 400px;}   
+        }
+
+        /* cursor animations */
+        @keyframes animated-cursor{
+            from{border-right-color: rgba(236, 241, 236, 0.75);}
+            to{border-right-color: transparent;}
+        }
+        .wel{
+            color: white;
+            position: absolute;
+            left: 2.2em;
+            top: 7em;
+            font-size: 32px;
+        }
+        form>.wel>h1 {
+            overflow: hidden; 
+            border-right: none; 
+            white-space: nowrap; 
+            margin: 0 auto;
+            letter-spacing: .15em; 
+            animation: 
+            typing 3.5s steps(40, end),
+            blink-caret .85s step-end infinite;
+        }
+        @keyframes typing {
+            from { width: 0 }
+             to { width: 100% }
+
+        }
+    </style>
+</head>
+<body>
+        <form action="">
+            <div class="main">
+                <div class="left">
+                    <i class="fa fa-user-circle-o" aria-hidden="true"></i>
+                </div>
+                <div class="right">
+                    <a href="Login.html" style="text-decoration: none; border: 0.5px solid white; text-align: center; padding-top:0.6em; font-size:30px; color: rgb(35, 27, 94); font-weight:800; background-color: white;">LogIn</a>
+                    <a href="signUp.html" style="text-decoration: none; border: 0.5px solid white; text-align: center; padding-top:0.6em; font-size:30px; color: rgb(35, 27, 94); font-weight:800;background-color: white;">SignUp</a>
+                </div>
+            </div>
+            <div class="typewriter">
+                <h1 style="color: white;">User <span style="color: brown;">LogIn</span></h1>
+
+                <h1 style="color: white;">User <span style="color: brown;">SignUP</span></h1>
+            </div>
+            <div class="wel">
+                <h1 style="color: brown;">Welcome!</h1>
+                <p>Nice to see you again</p>
+            </div>
+            <div class="animations">
+                <p>Choose Your Option!!!!!!!!!!!!!!</p>
+            </div>
+        </form>
+</body>
+</html>
