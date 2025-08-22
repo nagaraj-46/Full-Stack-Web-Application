@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="https://png.pngtree.com/png-clipart/20220922/original/pngtree-letter-v-icon-png-image_8627704.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Login Page</title>
+    <style>
+        body{
+            background: rgb(16,13,68);
+            background: linear-gradient(90deg, rgba(16,13,68,1) 43%, rgba(15,15,168,1) 100%, rgba(0,212,255,1) 100%);
+        }
+        .main{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .iteams{
+            border: 0.2px solid black;
+            padding: 25px;;
+            margin: 10px;
+            display: flex;
+            flex-direction: column;
+            row-gap: 25px;
+            box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
+            background-color: white;
+            border-radius: 15px;
+            margin-top: 8%;
+
+        }
+        .logo{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+        .iteams>div>input{
+            width: 280px;
+            height: 30px;
+            padding-left:35px;
+            border: none;
+            text-decoration: none;
+            border-bottom: 0.1px solid gray;
+            outline: none;
+            border-radius: 5px;
+        }
+        #userlogo{
+            font-size: 50px;
+        }
+        #icon1{
+            position: absolute;  
+            left: 27%;  
+            top: 44%;  
+            transition: 0.3s; 
+            align-items: center; 
+            font-size: 18px;
+        }
+        #icon2{
+            position: absolute;  
+            left: 27%;  
+            top: 55%;  
+            transition: 0.3s; 
+            align-items: center; 
+            font-size: 18px;
+        }
+        input::placeholder{
+            font-size: 26px;
+        }
+        .btn>button{
+            width: 320px;
+            height: 30px;
+            font-size: large;
+            background-color: rgb(20, 102, 20);
+            border: none;
+            outline: none;
+            color: white;
+            border-radius: 5px;
+        }
+        .btn>button:hover{
+            background-color: red;
+            opacity: 0.5;
+        }
+        .main1{
+            margin-top: 6.5em;
+            width: 25em;
+            height: 30em;
+            border-radius: 30px;
+        }
+        .main1>img{
+            border-radius: 25px;
+        }
+        .logo>.typewriter>h2 {
+            overflow: hidden; 
+            border-right: .15em solid orange; 
+            white-space: nowrap; 
+            margin: 0 auto;
+            letter-spacing: .15em; 
+            animation: 
+            typing 3.5s steps(40, end),
+            blink-caret .85s step-end infinite;
+        }
+        @keyframes typing {
+            from { width: 0 }
+             to { width: 100% }
+        }
+        .iteams>.logo{
+            margin-top: 1em;
+        }
+        .logo>i{
+            margin-bottom: 0.5em;
+        }
+        .icons{
+            display: flex;
+            flex-direction: row;
+            column-gap: 20px;
+            padding: 20px;
+            margin-left: 55px;
+        }
+    </style>
+</head>
+<body>
+    <div class=" main">
+        <form action="LogIn" method="get" class="iteams">
+            <div class="logo">
+                <i class="fa fa-users" aria-hidden="true" id="userlogo"></i>
+                <div class="typewriter">
+                    <h2>User <span style="color: brown;">LogIn</span></h2>
+                </div>
+            </div>
+            <div>
+                <label style="font-size: 18px;">Enter Your Mobile Number</label><br>
+                <i class="fa fa-phone-square" aria-hidden="true" id="icon1"></i>
+                <input type="number" name="MobileNumber" required>
+            </div>
+            <div>
+                <label style="font-size: 18px;">Enter Your Password</label><br>
+                <i class="fa fa-unlock-alt" aria-hidden="true" id="icon2"></i>
+                <input type="password" name = "NewPassword" required>
+            </div>
+            <div class="btn">
+                <button >Login</button>
+            </div>
+            <div class="icons">
+                <a href="https://www.facebook.com" class="fa fa-facebook" aria-hidden="true" style="text-decoration: none; font-size: 28px;"></a>
+                <a href="https://web.whatsapp.com" class="fa fa-whatsapp" aria-hidden="true" style="text-decoration: none; font-size: 28px;"></a>
+                <a href="https://www.instagram.com" class="fa fa-instagram" aria-hidden="true" style="text-decoration: none; font-size: 28px;"></a>
+                <a href="https://x.com/login" class="fa fa-twitter" aria-hidden="true" style="text-decoration: none; font-size: 28px;"></a>
+            </div>
+            <div>
+                <span style="padding-left: 3em; font-size: 18px;">Forgot Your Password ?</span>&nbsp;<a href="Update.html" style="text-decoration: none;">ClickHere</a>
+            </div>
+            <div style="text-align: center;">
+                <span style="font-size: 18px;">Not a member?</span>
+                <a href="signUp.html" style="text-decoration: none; font-style: 18px; font-size:18px;">sign Up</a>
+            </div>
+        </form>
+        <div class="main1">
+            <img src="https://th.bing.com/th/id/OIP.vlG3sSKcA4qvJIeaO58Y5AAAAA?rs=1&pid=ImgDetMain">
+        </div>
+    </div>
+</body>
+</html>
